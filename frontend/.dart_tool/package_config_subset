@@ -1,7 +1,7 @@
 frontend
 3.5
-file:///C:/ReactJS/NUPalsMobile/frontend/
-file:///C:/ReactJS/NUPalsMobile/frontend/lib/
+file:///C:/ReactJS/NUPalsMobile_len/frontend/
+file:///C:/ReactJS/NUPalsMobile_len/frontend/lib/
 async
 2.18
 file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/
@@ -72,8 +72,8 @@ file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_screenuti
 file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_screenutil-5.9.3/lib/
 flutter_secure_storage
 2.12
-file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-5.1.2/
-file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-5.1.2/lib/
+file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-6.1.0/
+file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-6.1.0/lib/
 flutter_secure_storage_linux
 2.12
 file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.1/
@@ -98,6 +98,10 @@ flutter_svg
 2.17
 file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-1.1.6/
 file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-1.1.6/lib/
+fluttertoast
+2.12
+file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.8/
+file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.8/lib/
 http
 3.3
 file:///C:/Users/Rimiru/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.2/

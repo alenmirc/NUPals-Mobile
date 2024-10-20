@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/utils/constants.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:intl/intl.dart'; // Import intl package for date formatting
+import '../utils/api_constant.dart'; // Import the ApiConstants
 
 class MessagingScreen extends StatefulWidget {
   final String userId;
@@ -26,7 +28,7 @@ class _MessagingScreenState extends State<MessagingScreen> {
   Future<void> _fetchMessages() async {
     try {
       final response = await http.get(
-        Uri.parse('http://localhost:5000/api/messages/${widget.userId}/${widget.otherUserId}'),
+        Uri.parse('${ApiConstants.baseUrl}/messages/${widget.userId}/${widget.otherUserId}'),
       );
 
       if (response.statusCode == 200) {
@@ -49,7 +51,7 @@ class _MessagingScreenState extends State<MessagingScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://localhost:5000/api/messages'),
+        Uri.parse('${ApiConstants.baseUrl}/messages'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'senderId': widget.userId,
@@ -80,7 +82,11 @@ class _MessagingScreenState extends State<MessagingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Messaging'),
+         title: Text(
+        'Messaging',
+        style: TextStyle(color: Colors.white), // Set the text color to white
+      ),
+         backgroundColor: nuBlue, // Set AppBar color to nuBlue
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -91,13 +97,35 @@ class _MessagingScreenState extends State<MessagingScreen> {
                 itemCount: _messages.length,
                 itemBuilder: (context, index) {
                   final message = _messages[index];
-                  return ListTile(
-                    title: Text(message['content']),
-                    subtitle: Text(
-                      '${message['senderId'] == widget.userId ? 'You' : 'Them'} • ${_formatTimestamp(message['createdAt'])}', // Add timestamp formatting
+                  final isMe = message['senderId'] == widget.userId;
+
+                  return Align(
+                    alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
+                    child: Container(
+                      margin: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        color: isMe ? nuBlue : Colors.grey[200],
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            message['content'],
+                            style: TextStyle(color: isMe ? Colors.white : Colors.black),
+                          ),
+                          SizedBox(height: 4.0), // Space between message and timestamp
+                          Text(
+                            _formatTimestamp(message['createdAt']),
+                            style: TextStyle(
+                              color: isMe ? Colors.white70 : Colors.black54,
+                              fontSize: 12.0,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    tileColor: message['senderId'] == widget.userId ? Colors.lightBlueAccent : Colors.grey[200],
-                    contentPadding: EdgeInsets.all(10),
                   );
                 },
               ),

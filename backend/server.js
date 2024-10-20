@@ -8,6 +8,7 @@ const profileRoutes = require('./routes/profile');
 const postRoutes = require('./routes/post');
 const userRoutes = require('./routes/users');
 const messageRoutes = require('./routes/message');
+const groupChat = require('./routes/groupchat');
 const notificationRoutes = require('./routes/notifications'); // Add this line for notifications
 
 // Load environment variables
@@ -31,6 +32,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/group', groupChat);
 app.use('/api/notifications', notificationRoutes); // This line is correct
 
 // Connect to MongoDB
