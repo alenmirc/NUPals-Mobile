@@ -8,6 +8,8 @@
 # VS Code settings
 .vscode/
 
+node_modules
+
 # Build outputs
 build/
 ios/Flutter/Flutter.framework
@@ -21,6 +23,7 @@ android/.gradle
 android/app/build/
 android/app/libs/
 ios/Pods/
+
 
 # Other
 *.iml
