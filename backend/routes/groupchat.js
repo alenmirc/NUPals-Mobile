@@ -26,7 +26,9 @@ router.get('/chat/:userId', async (req, res) => {
     try {
         const groupChatId = req.params.groupChatId;
         const messages = await GroupChatMessage.find({ groupId: groupChatId })
-            .populate('senderId', 'firstName lastName'); // Ensure this populates correctly
+            .populate('senderId', 'firstName lastName'); // Populates firstName and lastName from the User model
+
+        console.log(messages); // Log messages to check if firstName and lastName are populated
 
         return res.status(200).json(messages);
     } catch (error) {

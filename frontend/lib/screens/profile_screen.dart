@@ -26,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<Map<String, dynamic>> fetchUserProfile(String userId) async {
     try {
-      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/profile/$userId'));
+      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/profile/$userId'));
 
       if (response.statusCode == 200) {
         final userProfile = jsonDecode(response.body);

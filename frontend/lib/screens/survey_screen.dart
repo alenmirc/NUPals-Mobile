@@ -75,7 +75,7 @@ class _SurveyScreenState extends State<SurveyScreen> {
         .toList();
 
     final response = await http.post(
-      Uri.parse('${ApiConstants.baseUrl}/survey/analyze'),
+      Uri.parse('${ApiConstants.baseUrl}/api/survey/analyze'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode({'surveyResponse': {'questions': responseText}, 'userId': _userId}),
     );

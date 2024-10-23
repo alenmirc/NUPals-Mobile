@@ -27,7 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('${ApiConstants.baseUrl}/auth/send-verification'),
+        Uri.parse('${ApiConstants.baseUrl}/api/auth/send-verification'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'email': email}),
       );
@@ -57,7 +57,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('${ApiConstants.baseUrl}/auth/verify-code'),
+        Uri.parse('${ApiConstants.baseUrl}/api/auth/verify-code'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'email': email, 'code': code}),
       );

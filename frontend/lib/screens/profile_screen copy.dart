@@ -27,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<Map<String, dynamic>> fetchUserProfile(String userId) async {
     try {
-      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/profile/$userId'));
+      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/profile/$userId'));
 
       if (response.statusCode == 200) {
         final userProfile = jsonDecode(response.body);
@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _followUser(String followId) async {
     try {
       final response = await http.post(
-        Uri.parse('${ApiConstants.baseUrl}/profile/$followId/follow'),
+        Uri.parse('${ApiConstants.baseUrl}/api/profile/$followId/follow'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'followId': followId}),
       );
@@ -75,7 +75,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _unfollowUser(String followId) async {
     try {
       final response = await http.post(
-        Uri.parse('${ApiConstants.baseUrl}/profile/$followId/unfollow'),
+        Uri.parse('${ApiConstants.baseUrl}/api/profile/$followId/unfollow'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'followId': followId}),
       );

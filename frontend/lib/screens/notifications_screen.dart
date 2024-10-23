@@ -24,7 +24,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
 
   // Function to fetch notifications from backend
   Future<List<UserNotification>> _fetchNotifications(String userId) async {
-    final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/notifications/$userId/notifications'));
+    final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/notifications/$userId/notifications'));
 
     if (response.statusCode == 200) {
       final List<dynamic> data = jsonDecode(response.body);

@@ -17,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _login() async {
     try {
       final response = await http.post(
-        Uri.parse('${ApiConstants.baseUrl}/auth/login'),
+        Uri.parse('${ApiConstants.baseUrl}/api/auth/login'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': _emailController.text,

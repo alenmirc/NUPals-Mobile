@@ -33,7 +33,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
   }
 
   Future<void> _fetchPostDetails() async {
-    final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/posts/${widget.postId}'));
+    final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/posts/${widget.postId}'));
     if (response.statusCode == 200) {
       final post = json.decode(response.body);
       setState(() {
@@ -48,7 +48,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
 
   Future<void> _toggleLike() async {
     final response = await http.post(
-      Uri.parse('${ApiConstants.baseUrl}/posts/${widget.postId}/like'),
+      Uri.parse('${ApiConstants.baseUrl}/api/posts/${widget.postId}/like'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode({'userId': widget.userId}),
     );
@@ -67,7 +67,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
     if (comment.isEmpty) return;
 
     final response = await http.post(
-      Uri.parse('${ApiConstants.baseUrl}/posts/${widget.postId}/comment'),
+      Uri.parse('${ApiConstants.baseUrl}/api/posts/${widget.postId}/comment'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode({
         'userId': widget.userId,

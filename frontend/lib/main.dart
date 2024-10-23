@@ -18,7 +18,7 @@ import 'package:frontend/utils/shared_preferences.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
+  
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Ensure binding is initialized
   final userId = await SharedPreferencesService.getUserId(); // Load user ID

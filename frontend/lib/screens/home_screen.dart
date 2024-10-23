@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Function to fetch posts from the backend
   Future<void> fetchPosts() async {
-    final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/posts'));
+    final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/posts'));
 
     if (response.statusCode == 200) {
       setState(() {

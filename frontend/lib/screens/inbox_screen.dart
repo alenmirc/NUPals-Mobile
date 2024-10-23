@@ -25,7 +25,7 @@ class _InboxScreenState extends State<InboxScreen> {
   Future<void> _fetchMutualFollowers() async {
     try {
       final response = await http.get(
-        Uri.parse('${ApiConstants.baseUrl}/users/mutual-followers/${widget.userId}'),
+        Uri.parse('${ApiConstants.baseUrl}/api/users/mutual-followers/${widget.userId}'),
       );
 
       if (response.statusCode == 200) {

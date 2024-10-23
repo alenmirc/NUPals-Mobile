@@ -32,7 +32,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   Future<void> _fetchUserInterests() async {
     try {
-      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/users/profile/${widget.userId}'));
+      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/users/profile/${widget.userId}'));
       if (response.statusCode == 200) {
         final user = jsonDecode(response.body);
         setState(() {
@@ -54,7 +54,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   Future<void> _fetchAllUsers() async {
     try {
-      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/users'));
+      final response = await http.get(Uri.parse('${ApiConstants.baseUrl}/api/users'));
       if (response.statusCode == 200) {
         final List<dynamic> users = jsonDecode(response.body);
         setState(() {
@@ -225,7 +225,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   Future<void> followUser(String userIdToFollow) async {
     final response = await http.post(
-      Uri.parse('${ApiConstants.baseUrl}/profile/${widget.userId}/follow'),
+      Uri.parse('${ApiConstants.baseUrl}/api/profile/${widget.userId}/follow'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({'followId': userIdToFollow}),
     );
