@@ -28,6 +28,7 @@
     "nodemon": "^3.1.7",
     "openai": "^4.65.0",
     "rake-js": "^0.1.1",
+    "socket.io": "^4.8.0",
     "stopword": "^3.1.1"
   }
 }
