@@ -125,10 +125,10 @@ router.post('/reset-password', async (req, res) => {
  
   res.status(200).json({ message: 'Password reset successfully' });
 });
- 
+
 // Route to handle user registration
 router.post('/register', async (req, res) => {
-  const { email, username, password, age, college, yearLevel, bio } = req.body;
+  const { email, username, password, age, college, bio } = req.body;
  
   // Check if the user already exists
   const existingUser = await User.findOne({ email });
@@ -146,7 +146,6 @@ router.post('/register', async (req, res) => {
     username,
     age,
     college,
-    yearLevel,
     bio,
   });
  
@@ -162,14 +161,11 @@ router.post('/register', async (req, res) => {
   }
 });
  
+
+
 // Login route
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
-
-  // Validate email domain
-  if (!email.endsWith('@test.com')) {
-    return res.status(400).json({ message: 'Invalid email domain' });
-  }
 
   try {
     const user = await User.findOne({ email });
@@ -192,12 +188,13 @@ router.post('/login', async (req, res) => {
     return res.status(200).json({
       userId: user._id.toString(),
       message: 'Login successful',
-    }); 
+    });
   } catch (error) {
     console.error('Error during login:', error);
     res.status(500).json({ message: 'Server error' });
   }
 });
+
 
  
 //logout
@@ -226,5 +223,37 @@ router.post('/logout', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
+
+router.post('/change-password', async (req, res) => {
+  const { userId, oldPassword, newPassword } = req.body;
+
+  // Check for valid user ID
+  if (!userId) {
+      return res.status(400).json({ message: 'User ID is required' });
+  }
+
+  try {
+      const user = await User.findById(userId);
+      if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+      }
+
+      const isMatch = await bcrypt.compare(oldPassword, user.password);
+      if (!isMatch) {
+          return res.status(400).json({ message: 'Old password is incorrect' });
+      }
+
+      // Hash the new password and update it
+      user.password = await bcrypt.hash(newPassword, 10);
+      await user.save();
+
+      return res.status(200).json({ message: 'Password changed successfully' });
+  } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: 'Error changing password' });
+  }
+});
+
+
 
 module.exports = router;

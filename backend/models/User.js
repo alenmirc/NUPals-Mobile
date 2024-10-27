@@ -9,7 +9,6 @@ const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   age: { type: Number, default: null },
   college: { type: String, default: '' },
-  yearLevel: { type: String, default: '' },
   bio: { type: String, default: '' },
   profilePicture: { type: String, default: '' },
   customInterests: { type: [String], default: [] }, // New field for custom interests
@@ -18,6 +17,7 @@ const userSchema = new Schema({
   following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   followers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   notifications: [{ type: String }], // New field for notifications
+   lastSurveyDate: { type: Date, default: null }, 
 }, { timestamps: true });
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
