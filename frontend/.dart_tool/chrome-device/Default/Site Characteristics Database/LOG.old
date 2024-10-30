@@ -1,20 +1,17 @@
-2024/10/27-22:51:10.162 6968 Reusing MANIFEST C:\Users\Dastin\AppData\Local\Temp\flutter_tools.4e9d9813\flutter_tools_chrome_device.e07fccda\Default\Site Characteristics Database/MANIFEST-000001
-2024/10/27-22:51:10.191 6968 Recovering log #3
-2024/10/27-22:51:10.191 6968 Level-0 table #22: started
-2024/10/27-22:51:10.204 6968 Level-0 table #22: 259 bytes OK
-2024/10/27-22:51:10.204 6968 Recovering log #6
-2024/10/27-22:51:10.204 6968 Level-0 table #23: started
-2024/10/27-22:51:10.208 6968 Level-0 table #23: 180 bytes OK
-2024/10/27-22:51:10.208 6968 Recovering log #10
-2024/10/27-22:51:10.208 6968 Level-0 table #24: started
-2024/10/27-22:51:10.214 6968 Level-0 table #24: 372 bytes OK
-2024/10/27-22:51:10.214 6968 Recovering log #19
-2024/10/27-22:51:10.215 6968 Reusing old log C:\Users\Dastin\AppData\Local\Temp\flutter_tools.4e9d9813\flutter_tools_chrome_device.e07fccda\Default\Site Characteristics Database/000019.log 
-2024/10/27-22:51:10.217 6968 Delete type=0 #3
-2024/10/27-22:51:10.217 6968 Delete type=2 #4
-2024/10/27-22:51:10.223 6968 Delete type=2 #6
-2024/10/27-22:51:10.224 6968 Delete type=0 #6
-2024/10/27-22:51:10.224 6968 Delete type=0 #10
-2024/10/27-22:51:10.224 6968 Delete type=2 #11
-2024/10/27-22:51:10.224 6968 Delete type=2 #13
-2024/10/27-22:51:10.224 6968 Delete type=2 #14
+2024/10/28-08:12:30.390 4a08 Reusing MANIFEST C:\Users\Rimiru\AppData\Local\Temp\flutter_tools.334cfab3\flutter_tools_chrome_device.25d7dfa8\Default\Site Characteristics Database/MANIFEST-000001
+2024/10/28-08:12:30.392 3040 Compacting 12@0 + 0@1 files
+2024/10/28-08:12:30.396 3040 Generated table #27@0: 5 keys, 387 bytes
+2024/10/28-08:12:30.396 3040 Compacted 12@0 + 0@1 files => 387 bytes
+2024/10/28-08:12:30.398 3040 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/10/28-08:12:30.398 3040 Delete type=2 #3
+2024/10/28-08:12:30.398 3040 Delete type=2 #4
+2024/10/28-08:12:30.399 3040 Delete type=2 #6
+2024/10/28-08:12:30.399 3040 Delete type=2 #7
+2024/10/28-08:12:30.399 3040 Delete type=2 #11
+2024/10/28-08:12:30.399 3040 Delete type=2 #13
+2024/10/28-08:12:30.399 3040 Delete type=2 #14
+2024/10/28-08:12:30.399 3040 Delete type=2 #20
+2024/10/28-08:12:30.399 3040 Delete type=2 #21
+2024/10/28-08:12:30.399 3040 Delete type=2 #22
+2024/10/28-08:12:30.399 3040 Delete type=2 #23
+2024/10/28-08:12:30.399 3040 Delete type=2 #24

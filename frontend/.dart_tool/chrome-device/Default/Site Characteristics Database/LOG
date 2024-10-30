@@ -1,11 +1,36 @@
-2024/10/27-23:02:24.955 530c Reusing MANIFEST C:\Users\Dastin\AppData\Local\Temp\flutter_tools.d929f6ab\flutter_tools_chrome_device.2620428\Default\Site Characteristics Database/MANIFEST-000001
-2024/10/27-23:02:24.967 530c Recovering log #19
-2024/10/27-23:02:24.968 530c Reusing old log C:\Users\Dastin\AppData\Local\Temp\flutter_tools.d929f6ab\flutter_tools_chrome_device.2620428\Default\Site Characteristics Database/000019.log 
-2024/10/27-23:02:24.969 530c Delete type=0 #3
-2024/10/27-23:02:24.969 530c Delete type=2 #4
-2024/10/27-23:02:24.969 530c Delete type=2 #6
-2024/10/27-23:02:24.969 530c Delete type=0 #6
-2024/10/27-23:02:24.969 530c Delete type=0 #10
-2024/10/27-23:02:24.969 530c Delete type=2 #11
-2024/10/27-23:02:24.969 530c Delete type=2 #13
-2024/10/27-23:02:24.970 530c Delete type=2 #14
+2024/10/28-13:22:06.645 33d4 Reusing MANIFEST C:\Users\Rimiru\AppData\Local\Temp\flutter_tools.5d893e3f\flutter_tools_chrome_device.ed12b67e\Default\Site Characteristics Database/MANIFEST-000001
+2024/10/28-13:22:06.645 33d4 Recovering log #3
+2024/10/28-13:22:06.645 33d4 Level-0 table #29: started
+2024/10/28-13:22:06.674 33d4 Level-0 table #29: 259 bytes OK
+2024/10/28-13:22:06.674 33d4 Recovering log #6
+2024/10/28-13:22:06.674 33d4 Level-0 table #30: started
+2024/10/28-13:22:06.691 33d4 Level-0 table #30: 565 bytes OK
+2024/10/28-13:22:06.692 33d4 Recovering log #10
+2024/10/28-13:22:06.692 33d4 Level-0 table #31: started
+2024/10/28-13:22:06.818 33d4 Level-0 table #31: 609 bytes OK
+2024/10/28-13:22:06.819 33d4 Recovering log #19
+2024/10/28-13:22:06.820 33d4 Level-0 table #32: started
+2024/10/28-13:22:06.842 33d4 Level-0 table #32: 235 bytes OK
+2024/10/28-13:22:06.842 33d4 Recovering log #26
+2024/10/28-13:22:06.842 33d4 Reusing old log C:\Users\Rimiru\AppData\Local\Temp\flutter_tools.5d893e3f\flutter_tools_chrome_device.ed12b67e\Default\Site Characteristics Database/000026.log 
+2024/10/28-13:22:06.848 33d4 Delete type=2 #3
+2024/10/28-13:22:06.848 33d4 Delete type=0 #3
+2024/10/28-13:22:06.848 33d4 Delete type=2 #4
+2024/10/28-13:22:06.848 33d4 Delete type=2 #6
+2024/10/28-13:22:06.848 33d4 Delete type=0 #6
+2024/10/28-13:22:06.848 33d4 Delete type=2 #7
+2024/10/28-13:22:06.848 33d4 Delete type=0 #10
+2024/10/28-13:22:06.848 33d4 Delete type=2 #11
+2024/10/28-13:22:06.848 33d4 Delete type=2 #13
+2024/10/28-13:22:06.848 33d4 Delete type=2 #14
+2024/10/28-13:22:06.849 33d4 Delete type=0 #19
+2024/10/28-13:22:06.849 33d4 Delete type=2 #20
+2024/10/28-13:22:06.851 f9c Compacting 4@0 + 1@1 files
+2024/10/28-13:22:06.854 f9c Generated table #33@0: 5 keys, 387 bytes
+2024/10/28-13:22:06.854 f9c Compacted 4@0 + 1@1 files => 387 bytes
+2024/10/28-13:22:06.857 f9c compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/10/28-13:22:06.857 f9c Delete type=2 #27
+2024/10/28-13:22:06.858 f9c Delete type=2 #29
+2024/10/28-13:22:06.858 f9c Delete type=2 #30
+2024/10/28-13:22:06.858 f9c Delete type=2 #31
+2024/10/28-13:22:06.858 f9c Delete type=2 #32
