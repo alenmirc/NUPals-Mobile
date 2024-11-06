@@ -1,6 +1,6 @@
 const express = require('express');
 const User = require('../models/User');
-const { GroupChat, GroupChatMessage } = require('../models/GroupChat');
+const { GroupChat, GroupChatMessage } = require('../models/groupChat');
 const router = express.Router();
 
 // 1. Fetch all group chats for a user
