@@ -8,7 +8,7 @@ const natural = require('natural');
 const Log = require('../models/log');
 const MultiWordKeyword = require('../models/MultiWordKeyword');
 const Stopword = require('../models/Stopword');
-const { GroupChat } = require('../models/GroupChat');
+const { GroupChat } = require('../models/groupChat');
 
 
 async function extractInterests(answers) {
