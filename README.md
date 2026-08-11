@@ -16,6 +16,10 @@ https://nu-palsweb.vercel.app/
 - Express.js
 - MongoDB
 
+## Note
+
+This project primarily focuses on implementing the backend architecture and core functionalities of the NUPals mobile application, including authentication, interest matching, messaging, and API integration. While the application is fully functional, the frontend can still be improved in future iterations through enhanced UI/UX, performance optimizations, and additional features.
+
 ## Credits
 
 This project was developed as part of the **National University Capstone Project** by **alenmirc** for the **National University** community.
