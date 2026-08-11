@@ -1,5 +1,21 @@
-NUPals Mobile
+# NUPals Mobile
 
-NUPals is an exclusive social platform designed for NU students to foster collaboration and connection within the university community. With NUPals, students can match with others based on shared interests, opening up opportunities for academic partnerships, project collaborations, or simply making new friends. Our system allows you to explore common hobbies, skills, and activities while providing a secure space to message and connect with like-minded peers.
+NUPals Mobile is an exclusive social networking application for **National University (NU)** students. Its primary goal is to help students build meaningful connections by matching them with fellow students who share similar interests, hobbies, and skills, fostering friendships, academic collaboration, and a stronger university community.
 
-Visit: https://nu-palsweb.vercel.app/
+📱 **Download the application:**  
+https://nu-palsweb.vercel.app/
+
+> **Note:** The administrative web interface is available in a separate repository:  
+> https://github.com/alenmirc/NUPals-Web
+
+## Built With
+
+- Flutter
+- Dart
+- Node.js
+- Express.js
+- MongoDB
+
+## Credits
+
+This project was developed as part of the **National University Capstone Project** by **alenmirc** for the **National University** community.
